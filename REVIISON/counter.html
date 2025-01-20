@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'General sans';
+        }
+
+        html,body{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightseagreen;
+        }
+
+        #main{
+            height: 50%;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: 50px;
+            border-radius: 20px;
+            position: relative;
+            flex-direction: column;
+            border: 1px solid black;
+            background-color: blueviolet;
+        }
+
+        #bottom{
+            display: flex;
+            gap: 5px;
+            height: fit-content;
+            width: 100%;
+            padding: 0px 10px;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        #display{
+            color: white;
+            font-size: 10vw;
+        }
+
+        .workingpart{
+            background-color: lightblue;
+            padding: 10px 30px;
+            border-radius: 40px;
+            font-size: 4vw;
+            color: red;
+            user-select: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <h1 id="display">0</h1>
+        <div id="bottom">
+            <div id="minus" class="workingpart">-</div>
+            <div id="reset" class="workingpart"><i class="ri-refresh-line"></i></div>
+            <div id="add" class="workingpart">+</div>
+        </div>
+    </div>
+
+
+    <script>
+        var clutter = '';
+        var display = document.querySelector('#display');
+        var minus = document.querySelector('#minus');
+        var add = document.querySelector('#add');
+        var reset = document.querySelector('#reset');
+        
+        let count = 0;
+        add.addEventListener('click',()=>{
+            count++;
+            display.innerHTML = count
+        })
+
+        minus.addEventListener('click',()=>{
+            if(count > 0){
+                count--;
+            display.innerHTML = count
+            }else if(count == 0){
+                alert('all syntax is cleared')
+            }
+        })
+        
+        reset.addEventListener('click',()=>{
+            if(count == 0){
+                alert('already in zero')
+            }else{
+                count = 0
+            display.innerHTML = count;
+            }
+        })
+
+
+
+
+
+
+
+        // add.addEventListener('click',()=>{
+        //     display.innerHTML =+ 1
+        // })
+        
+        // minus.addEventListener('click',()=>{
+        //     display.innerHTML =- 1
+        // })
+
+        // reset.addEventListener('click',()=>{
+        //     console.log('reseted')
+        // })
+
+
+
+    </script>
+</body>
+
+</html>

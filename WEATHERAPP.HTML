@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP PRACTICE</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'General sans';
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            background-color: blue;
+        }
+
+        #main {
+            height: 80%;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+            color: white;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <input type="text" placeholder="Enter your city" id="cityInput">
+        <button id="btn">Search</button>
+        <h1 id="temp">0<sup>.</sup>C</h1>
+        <h1 id="city">Enter your city</h1>
+        <h5 id="hum">Humidity</h5>
+        <h5 id="wind">Wind Speed</h5>
+    </div>
+
+
+    <script>
+        // Weather App API details
+        const myapi = '0e2422385b6b206cf750abd7766fac6b'; // Replace with your API Key
+        const apiid = 'https://api.openweathermap.org/data/2.5/weather?units=metric';
+
+        // Input and Button Elements
+        const input = document.querySelector('#cityInput');
+        const btn = document.querySelector('#btn');
+
+        // Weather Fetch Function
+        async function checkweather(cityname) {
+            try {
+                const fetching = await fetch(apiid + `&q=${cityname}` + `&appid=${myapi}`);
+                const result = await fetching.json();
+
+                if (result.cod === 200) {
+                    // Display Weather Data
+                    document.querySelector('#temp').innerHTML = Math.round(result.main.temp) + '<sup>.</sup>C';
+                    document.querySelector('#city').innerHTML = cityname;
+                    document.querySelector('#hum').innerHTML = 'Humidity: ' + result.main.humidity + ' %';
+                    document.querySelector('#wind').innerHTML = 'Wind Speed: ' + result.wind.speed + ' km/h';
+                } else {
+                    alert('City not found! Please enter a valid city name.');
+                }
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+                alert('Something went wrong. Please try again later.');
+            }
+        }
+
+        // Add Event Listener for Button Click
+        btn.addEventListener('click', () => {
+            const cityname = input.value.trim(); // Get input value
+            if (cityname) {
+                checkweather(cityname); // Call function with city name
+            } else {
+                alert('Please enter a city name!');
+            }
+        });
+    </script>
+</body>
+
+</html>

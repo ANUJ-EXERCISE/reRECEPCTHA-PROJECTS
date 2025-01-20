@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+    <link rel="stylesheet" href="furniture.css">
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="nav">
+            <ul>
+                <li><a href="#">Furniture</a>
+                    <div id="ek"></div>
+                </li>
+                <li><a href="#">Designers</a>
+                    <div id="ek"></div>
+                </li>
+                <li><a href="#">Trends</a>
+                    <div id="ek"></div>
+                </li>
+                <li><a href="#">Blog</a>
+                    <div id="ek"></div>
+                </li>
+                <li><a href="#">About Us</a>
+                    <div id="ek"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="landingpage">
+            <div id="divimage">
+                <img src="furniture2.jpeg" alt="" id="imj" class="blur">
+                <img src="furniture.jpg" alt="" id="imj" class="blur">
+            </div>
+            <div id="overlaytext">
+                <h1>Furniture design</h1>
+                <button id="fbtn">show more</button>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="a">
+                <h1>products</h1>
+            </div>
+            <div id="b">
+                <div id="content">
+                    <div id="diva">
+                        <img src="./nfl/Couche_White_Transparent__Comfortable_Line_Drawing_Couch_Illustration__Wing_Drawing__Rat_Drawing__Couch_Drawing_PNG_Image_For_Free_Download-removebg-preview.png"
+                            alt="">
+                        <h5>Couches</h5>
+                        <h6>Comfortable sofas for relaxtion</h6>
+                    </div>
+                    <div id="divb"></div>
+                    <div id="divc"></div>
+                    <div id="divd">
+                        <img src="./nfl/Top_10_Chair_Design_Guide___The_Best_Chair_Styles-removebg-preview.png" alt="">
+                        <h5>Armchairs</h5>
+                        <h6>Comfortable armchairs for seating</h6>
+                    </div>
+                    <div id="dive"></div>
+                    <div id="divf"></div>
+                    <div id="divg">
+                        <img src="./nfl/Parlor_Table-removebg-preview.png" alt="" height="110px">
+                        <h5>Lamp</h5>
+                        <h6>Modern chairs for the office</h6>
+                    </div>
+                </div>
+            </div>
+            <div id="c">
+                <div id="cleft"></div>
+                <div id="cright">
+                    <h1>Drop Chair</h1>
+                    <h5>The Yellow leather edition</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis dolorum qui at. Placeat nulla
+                        in veniam sed quaerat cum error quis et, necessitatibus, temporibus excepturi neque quas
+                        mollitia illum expedita quia harum quasi. Quam tempora nobis saepe itaque qui vitae, minus modi
+                        corporis a nulla optio? Quasi asperiores obcaecati aperiam.</p>
+                    <button id="btn">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+    <script>
+
+        var elements = {
+            maindiv: document.querySelector('#main')
+        }
+
+        const scroll = new LocomotiveScroll({
+            el: elements.maindiv,
+            smooth: true
+        });
+        var image = document.querySelectorAll('#imj');
+        image.forEach((elem) => {
+            document.querySelector('#fbtn').addEventListener('mouseenter', () => {
+                elem.style.transform = 'scale(1.04)';
+                elem.classList.remove('blur');
+            })
+            document.querySelector('#fbtn').addEventListener('mouseleave', () => {
+                elem.style.transform = 'scale(1)';
+            })
+        })
+
+        var listItems = document.querySelectorAll('li');
+
+        listItems.forEach((listItem) => {
+            listItem.addEventListener('mouseenter', () => {
+                const ekDiv = listItem.querySelector('#ek'); 
+                if (ekDiv) {
+                    ekDiv.style.opacity = '1'; 
+                }
+            });
+
+            listItem.addEventListener('mouseleave', () => {
+                const ekDiv = listItem.querySelector('#ek'); 
+                if (ekDiv) {
+                    ekDiv.style.opacity = '0'; 
+                }
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>

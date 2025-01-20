@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'General sans';
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+}
+
+#main{
+    height: 460px;
+    width: 300px;
+    display: flex;
+    border-radius: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 100px lightseagreen;
+    padding: 7px;
+    background: linear-gradient(135deg,lightblue,lightseagreen,purple);
+}
+
+#top{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#center{
+    height: calc(100% - 150px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#center img{
+    opacity: 0;
+    transition: 1s;
+}
+
+#center img.visible {
+    opacity: 1; 
+}
+
+#bottom{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+
+#bottomleft{
+    height: 100%;
+    display: flex;
+    gap: 5px;
+    width: 30%;
+    align-items: center;
+}
+
+#bottomleft #lefttext{
+    color: white;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+#lefttext h6{
+    font-weight: 500;
+    color: #dadada;
+}
+
+#righttext h6{
+    font-weight: 500;
+    color: #dadada;
+}
+
+
+#bottomright #righttext{
+    color: white;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+#bottomleft img{
+    width: 30px;
+    height: 30px;
+}
+
+#bottomright img{
+    width: 30px;
+    height: 30px;
+}
+
+#bottomright{
+    height: 100%;
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    align-items: center;
+}
+
+#top input{
+    padding: 10px;
+    font-size: 1.3vw;
+    border: none;
+    width: 210px;
+    outline: none;
+    background-color: rgb(209, 206, 206);
+    color: black;
+    border-radius: 50px;
+    text-transform: capitalize;
+}
+
+
+#top i{
+    background-color: white;
+    font-size: 3vw;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#center img{
+    width: 180px;
+}
+
+#center h1:nth-of-type(1){
+    color: white;
+    font-size: 4vw;
+    letter-spacing: 3px;
+}
+
+#center h1:nth-of-type(2){
+    color: white;
+    font-weight: 400;
+}

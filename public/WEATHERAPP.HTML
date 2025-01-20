@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="WEATHERAPP.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="top">
+            <input type="text" placeholder="enter your city" required>
+            <i class="ri-search-line" id="search"></i>
+        </div>
+        <div id="center">
+            <img src="./images/wait.png" id="hisaab">
+            <h1 id="temp">--</h1>
+            <h1 id="city">Enter city name</h1>
+        </div>
+        <div id="bottom">
+            <div id="bottomleft">
+                <img src="./images/humidity.png">
+                <div id="lefttext">
+                    <h4 id="percentage">--</h4>
+                    <h6>Humidity</h6>
+                </div>
+            </div>
+            <div id="bottomright">
+                <img src="./images/wind.png">
+                <div id="righttext">
+                    <h4 id="speed">--</h4>
+                    <h6>Wind speed</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var apiid = '0e2422385b6b206cf750abd7766fac6b';
+        var apilink = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
+        var temperature = document.querySelector('#temp');
+        var temperature = document.querySelector('#temp');
+        var percentage = document.querySelector('#percentage');
+        var humidity = document.querySelector('#nami');
+        var wind = document.querySelector('#speed');
+        var input = document.querySelector('input');
+        var searchbtn = document.querySelector('#search');
+        var image = document.querySelector('#hisaab');
+
+        async function weatherinfor(cityname) {
+
+            var api = await fetch(`${apilink + cityname + `&appid=${apiid}`}`);
+            var json = await api.json();
+            var result = await json;
+            console.log(result);
+
+            temperature.innerHTML = Math.round(result.main.temp) + '°C';
+            city.innerHTML = result.name;
+            percentage.innerHTML = result.main.humidity + ' %';
+            wind.innerHTML = result.wind.speed + ' km/h';
+
+
+            function imageanimation() {
+                image.classList.remove('visible');
+                setTimeout(() => {
+                    if (result.weather[0].main == 'Mist') {
+                        image.src = './images/mist.png';
+                    } else if (result.weather[0].main == 'Clouds') {
+                        image.src = './images/clouds.png';
+                    } else if (result.weather[0].main == 'Clear') {
+                        image.src = './images/clear.png';
+                    } else if (result.weather[0].main == 'Drizzle') {
+                        image.src = './images/drizzle.png';
+                    } else if (result.weather[0].main == 'Rain') {
+                        image.src = './images/rain.png';
+                    } else if (result.weather[0].main == 'Wind') {
+                        image.src = './images/wind.png';
+                    } else if (result.weather[0].main == 'Snow') {
+                        image.src = './images/snow.png';
+                    } else if (result.weather[0].main == 'Humidity') {
+                        image.src = './images/humidity.png';
+                    }
+
+                }, 500);
+            }
+
+            imageanimation()
+        }
+
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && input.value.trim() !== '') {
+                weatherinfor(input.value);
+            } else if (input.value === '') {
+                image.src = './images/wait.png';
+                temperature.innerHTML = '--';
+                city.innerHTML = 'Fetching';
+                percentage.innerHTML = '--';
+                wind.innerHTML = '--';
+            }
+        });
+
+
+
+        searchbtn.addEventListener('click', () => {
+            weatherinfor(input.value);
+        })
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

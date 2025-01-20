@@ -1,0 +1,37 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/myfile"
+            ],
+            "url": "schemaURL"
+        },
+
+        {
+            "fileMatch": [
+                "/myfile"
+            ],
+            "url": "schemaURL"
+        },
+        {
+            "fileMatch": [
+                "/myfile"
+            ],
+            "url": "schemaURL"
+        },
+        {
+            "fileMatch": [
+                "/myfile"
+            ],
+            "url": "schemaURL"
+        }
+    ],
+    "launch": {
+        "version": "0.2.0",
+        "inputs": [],
+        "configurations": [],
+        "compounds": []
+    },
+    "typescript.preferences.includePackageJsonAutoImports": "off",
+    "git.ignoreLimitWarning": true
+}
