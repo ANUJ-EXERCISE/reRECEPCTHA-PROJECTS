@@ -313,22 +313,28 @@ setTimeout(() => {
 
 
 function startingpageanimation() {
-    setTimeout(() => {
-        elements.body.classList.add('hidden')
-    }, 10)
-    setTimeout(() => {
-        gsap.to(firstpage, {
-            y: '-100%',
-            duraiton: 1,
-        })
-    }, 1200)
-    setTimeout(() => {
-        elements.body.classList.remove('hidden')
-    }, 3000)
+    if (window.scrollY === 0) {
+        setTimeout(() => {
+            elements.body.classList.add('hidden')
+        }, 10)
+        setTimeout(() => {
+            gsap.to(firstpage, {
+                y: '-100%',
+                duraiton: 1,
+            })
+        }, 1200)
+        setTimeout(() => {
+            elements.body.classList.remove('hidden')
+        }, 3000)
+    } else {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            startingpageanimation(); // Re-run the function
+        }, 500)
+    }
 
 }
 
-startingpageanimation()
 
 function responsivemenuanimation() {
     if (window.innerWidth < 700) {
@@ -399,7 +405,6 @@ function responsivemenuanimation() {
     }
 }
 
-responsivemenuanimation();
 
 setTimeout(() => {
 
@@ -412,25 +417,11 @@ setTimeout(() => {
 
 
 
-
-var position = elements.headtext3.getBoundingClientRect().top;
-
-elements.body.addEventListener('scroll', () => {
-    if (window.innerWidth < 600) {
-        var navposition = elements.nav.getBoundingClientRect().top;
-
-        if (navposition <= 0) {
-            elements.nav.classList.add('sticky')
-        }
-    }
-})
-
-
-
-
 // Execute all functions
 
 wapis();
+startingpageanimation()
+responsivemenuanimation();
 stagger()
 hover(button);
 hover2(button2);

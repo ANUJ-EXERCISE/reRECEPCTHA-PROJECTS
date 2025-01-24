@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LETTER COUNTER PROJECT</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'General sans';
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightseagreen;
+        }
+
+        #main {
+            height: 80%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 160px 0;
+            justify-content: space-between;
+            color: gold;
+            background-color: black;
+        }
+
+        textarea {
+            border-radius: 20px;
+            padding: 20px;
+            outline: none;
+        }
+
+        #main h1 {
+            font-size: 8vw
+        }
+
+        #main h5 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <h1>letter counter</h1>
+        <textarea id="writtenspace" cols="40" rows="6"></textarea>
+        <h5>you written <span id="count">0</span> words</h5>
+    </div>
+
+
+    <script>
+        var textarea = document.querySelector('#writtenspace');
+        var count = document.querySelector('#count');
+        textarea.addEventListener('keypress', () => {
+                var value = textarea.value;
+                var counting = value.length;
+                count.innerHTML = counting
+                if(counting === 10){
+                    textarea.style.border = '1px solid red';
+                }
+        })
+
+    </script>
+</body>
+
+</html>

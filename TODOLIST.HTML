@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST </title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'General sans';
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(140deg, purple, yellow);
+        }
+
+        #main {
+            height: fit-content;
+            width: 50%;
+            padding: 40px 20px;
+            display: flex;
+            border-radius: 10px;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+        }
+
+        #main input {
+            width: 80%;
+            height: 40%;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            padding: 10px 10px;
+        }
+
+        #list {
+            justify-content: flex-start;
+            height: 30%;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #list ul li {
+            margin-left: 10px;
+            background-color: grey;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            position: relative;
+        }
+
+        #list ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #inputcontainer button {
+            background-color: red;
+            font-size: 2.3vw;
+            border: none;
+            box-shadow: 0 0 3px black;
+            color: burlywood;
+            padding: 4px 10px;
+            border-radius: 10px;
+        }
+
+        #inputcontainer {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        #list ul li img {
+            position: absolute;
+            height: 50%;
+            right: 0;
+            margin-right: 10px;
+            top: 30%;
+            border-radius: 50%;
+            width: fit-content;
+            padding: 5px;
+            background-color: antiquewhite;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="inputcontainer">
+            <input type="text" placeholder="enter your text">
+            <button id="addbtn">Add</button>
+        </div>
+        <div id="list">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        const input = document.querySelector('input');
+        const unorderlist = document.querySelector('ul');
+        const btn = document.querySelector('#addbtn');
+
+        // Counter to track tasks
+        let clutter = 0;
+
+        // Add task on button click
+        btn.addEventListener('click', () => {
+            if (input.value === '') {
+                alert('First add something');
+                return;
+            }
+
+            if (clutter < 6) {
+                const list = document.createElement('li');
+                list.innerHTML = input.value;
+                unorderlist.appendChild(list);
+                input.value = '';
+
+
+                const img = document.createElement('img');
+                img.src = 'cancel.png';
+                list.appendChild(img);
+
+                // Remove task on cancel button click
+                img.addEventListener('click', () => {
+                    list.remove();
+                    clutter--;
+                    savedata();
+                    if (clutter < 6) {
+                        btn.disabled = false;  // Enable add button if less than 6 tasks
+                    }
+                });
+
+                clutter++; // Increment the task count
+                savedata();
+                if (clutter >= 5) {
+                    alert('your cart is full')
+                    btn.disabled = true; // Disable add button if 6 tasks
+                }
+            }
+        });
+
+        // Save data to localStorage
+        function savedata() {
+            localStorage.setItem('data', unorderlist.innerHTML);
+        }
+
+        // Display saved data from localStorage
+        function displaydata() {
+            if (localStorage.getItem('data')) {
+                unorderlist.innerHTML = localStorage.getItem('data');
+
+                // Count number of tasks
+                clutter = unorderlist.children.length;
+
+                // Reattach event listeners to cancel buttons
+                document.querySelectorAll('#list ul li img').forEach(img => {
+                    img.addEventListener('click', () => {
+                        img.parentElement.remove();
+                        clutter--;
+                        savedata();
+                        if (clutter < 6) {
+                            btn.disabled = false; // Enable add button if less than 6 tasks
+                        }
+                    });
+                });
+
+                // Disable button if 6 or more tasks
+                if (clutter >= 6) {
+                    btn.disabled = true;
+                }
+            }
+        }
+
+        // Load saved data when the page loads
+        displaydata();
+
+    </script>
+</body>
+
+</html>
