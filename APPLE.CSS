@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html,body{
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+#landingpage{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#nav{
+    height: 6%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+    background-color: black;
+}
+
+#buynow{
+    height: 8%;
+    width: 100%;
+    color: white;
+    display: flex;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+#emi{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    gap: 5px;
+    border-top: 1px solid rgb(88, 87, 87);
+    background-color: rgb(29, 28, 28);
+}
+
+#emi h3{
+    font-size: 1.4vw
+}
+
+#emi h3:nth-of-type(2){
+    color: rgb(23, 120, 255);
+}
+
+#emi h3:nth-of-type(2)::after{
+    content: '>';
+    margin-left: 4px;
+}
+
+#nav #links ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+#nav #links ul li a{
+    text-decoration: none;
+    color: rgb(165, 164, 164);
+    padding: 10px;
+    font-size: 1.2vw;
+}
+
+#buynow #right ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+#buynow #right ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+#buynow #right ul li a h4{
+    font-size: 1.3vw;
+}
+
+#buynow #right ul li button{
+    background-color: rgb(23, 120, 255);
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 20px;
+}
+
+#airpods{
+    height: calc(100% - 24%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+}
+
+#airpods h1{
+    font-size: 16vw;
+    font-weight: 900;
+    transform: translateY(50%);
+}
+
+#airpods img{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

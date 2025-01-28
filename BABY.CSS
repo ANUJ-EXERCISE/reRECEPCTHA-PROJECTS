@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro display';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+#baby {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+#babyface {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    transform: translateY(15%);
+    align-items: center;
+    justify-content: center;
+}
+
+#babybody {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#ear-left {
+    height: 45px;
+    border-radius: 20px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: translatex(50%);
+    background-color: #cbab80;
+}
+
+#drum {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    background-color: #a99071;
+}
+
+#ear-right {
+    height: 45px;
+    transform: translatex(-50%);
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #cbab80;
+}
+
+#face {
+    height: 120px;
+    width: 120px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50%;
+    padding-bottom: 20px;
+    background-color: #cbab80;
+}
+
+#matha {
+    height: 70%;
+    width: 100%;
+    display: flex;
+}
+
+#nipal {
+    height: 20px;
+    width: 20%;
+    position: relative;
+    border-radius: 50%;
+    bottom: 15%;
+    position: absolute;
+    border-bottom: 3px solid black;
+}
+
+#nipal::after {
+    content: '';
+    height: 12px;
+    width: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    top: 96%;
+    z-index: -1;
+    right: 0;
+    position: absolute;
+    background-color: white;
+}
+
+#honey {
+    height: 40px;
+    width: 45px;
+    bottom: 7%;
+    transform: translateY(200%);
+    border-radius: 50%;
+    display: flex;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    position: absolute;
+    animation: gogo 1s 0.3s infinite;
+    background-color: lightseagreen;
+}
+
+.initial{
+    display: none !important;
+}
+
+
+@keyframes gogo {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+#gola {
+    height: 50%;
+    width: 50%;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0px 1px 1px black;
+    background-color: lightseagreen;
+}
+
+#gola::before {
+    content: '';
+    height: 110%;
+    width: 120%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(50%) translateX(-15%);
+    border-top: 1px solid lightseagreen;
+    border-bottom: 3px solid rgb(31, 159, 153);
+    border-left: 3px solid rgb(31, 159, 153);
+    border-right: 3px solid rgb(31, 159, 153);
+}
+
+#eye-left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#eye-right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+
+#eye-brow-left {
+    height: 0px;
+    width: 38px;
+    z-index: 999;
+    border-radius: 10px;
+    transform: translateX(15%) translateY(-270%);
+    position: absolute;
+    border: 5px solid rgb(197, 145, 48);
+}
+
+#cornea-left {
+    height: 48px;
+    width: 40px;
+    transform: translateX(15%) translateY(10%);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    background-color: white;
+}
+
+#cornea-left::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: blink 2s 2s infinite;
+    background-color: white;
+}
+
+@keyframes blink {
+
+    0%,
+    90% {
+        transform: scaleY(0);
+        /* Closed state */
+    }
+
+    92%,
+    98% {
+        transform: scaleY(1);
+        /* Opened state */
+    }
+
+    100% {
+        transform: scaleY(0);
+        /* Back to closed state */
+    }
+}
+
+#cornea-right::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: blink 2s 2s infinite;
+    background-color: white;
+}
+
+@keyframes blink {
+
+    0%,
+    90% {
+        transform: scaleY(0);
+        /* Closed state */
+    }
+
+    92%,
+    98% {
+        transform: scaleY(1);
+        /* Opened state */
+    }
+
+    100% {
+        transform: scaleY(0);
+        /* Back to closed state */
+    }
+}
+
+#eye-brow-right {
+    height: 0px;
+    width: 38px;
+    border-radius: 10px;
+    z-index: 999;
+    transform: translateX(-15%) translateY(-290%);
+    position: absolute;
+    border: 5px solid rgb(197, 145, 48);
+}
+
+.soch {
+    transform: translateX(-15%) translateY(-320%) !important;
+}
+
+.cry1{
+    transform: translateX(15%) translateY(-270%) rotate(-20deg) !important;
+}
+
+.cry2{
+    transform: translateX(-15%) translateY(-290%) rotate(20deg)!important;
+}
+
+#cornea-right {
+    height: 48px;
+    width: 40px;
+    border-radius: 50px;
+    display: flex;
+    overflow: hidden;
+    transform: translateX(-15%) translateY(10%);
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#pupil {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    transform: translateY(40%);
+    background-color: black;
+}
+
+
+#ohh {
+    height: 10px;
+    width: 10px;
+    transform: translate(35%, 35%);
+    border-radius: 50%;
+    background-color: white;
+}
+
+#body {
+    position: relative;
+    height: 120px;
+    width: 80px;
+    display: flex;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    background-color: #c5c4fd;
+    border-radius: 40px 40px 10px 10px;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 75%, 85% 100%, 15% 100%, 0% 75%, 0% 0%);
+}
+
+
+#body h4 {
+    color: rgb(237, 237, 56);
+    font-weight: 900;
+    transform: translateY(-100%);
+}
+
+#handfirst{
+    height: 20px;
+    width: 50px;
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: 999;
+    border-radius: 50px;
+    background-color: #5f7dc3;
+
+}
+#handsecond{
+    height: 20px;
+    width: 50px;
+    transform: translateX(100%);
+    position: absolute;
+    z-index: 999;
+    border-radius: 50px;
+    background-color: #5f7dc3;
+
+}
+
+#write {
+    transform: translateY(-200%);
+    display: flex;
+    flex-direction: column;
+}
+
+#write p {
+    color: rgb(11, 11, 132);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+#write input {
+    height: 30px;
+    width: 200px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border: 1px solid #5f7dc3;
+    border-radius: 20px;
+}
+
+#likho {
+    display: flex;
+    gap: 5px;
+}
+
+#write button {
+    height: 30px;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #5f7dc3;
+    color: white;
+}
+
+#write h4 {
+    font-size: 1.3vw;
+    color: grey;
+    margin: 2px;
+}
+
+#cry1 {
+    height: 65px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 50px;
+    transform: translateY(70%) translateX(20%);
+    width: 13px;
+    z-index: -1;
+    position: absolute;
+    display: none;
+    background-color: blue;
+}
+
+.tear1{
+    display: initial !important;
+}
+.tear2{
+    display: initial !important;
+}
+
+#cry2 {
+    height: 65px;
+    border-bottom-left-radius: 7px;
+    display: none;
+    border-bottom-right-radius: 50px;
+    transform: translateY(70%) translateX(-20%);
+    width: 13px;
+    z-index: -1;
+    position: absolute;
+    background-color: blue;
+}

@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Supreme Variable';
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    background-color: rgb(16, 15, 15);
+    width: 100%;
+}
+
+#landingpage{
+    height: 100vh;
+    width: 100%;
+}
+
+#upper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#lower{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#imagedivfirst{
+    height: 230px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+#imagedivfirst #imagedivfirsta{
+    height: 100%;
+    border-radius: 7px;
+    width: 38%;
+    background-image: url(NEEBO/BUDS.webp);
+    background-size: cover;
+    background-position: top center;
+}
+
+
+#imagedivfirst #imagedivfirstb{
+    height: 63%;
+    width: 15%;
+    background-image: url(./NEEBO/ORANGELADY.webp);
+    background-size: cover;
+    border-radius: 7px;
+    background-position: top center;
+}
+
+#imagedivsecond{
+    display: flex;
+    height: 250px;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#imagedivseconda{
+    height: 80%;
+    width: 35%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 7px;
+    background-image: url(NEEBO/LADY.webp);
+}
+
+#imagedivsecondb{
+    height: 100%;
+    width: 47%;
+    background-position: center;
+    border-radius: 7px;
+    background-size: cover;
+    background-image: url(NEEBO/GOLABUDS.webp);
+}
+
+#nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nava{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#nava ul{
+    display: flex;
+    gap: 40px;
+}
+
+#nava ul li{
+    list-style: none;
+}
+
+#nav ul li a{
+    color: white;
+    font-weight: 700;
+    font-size: 1.4vw;
+    text-decoration: none;
+}
+
+#navb{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 60%);
+}
+
+#navc{
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    gap: 100px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+#navc #navcleft{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+#navc #navcleft ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+#navc #navcright{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+#nav #navcright i{
+    color: white;
+    font-size: 2vw;
+}
+
+#nav #navcright h5{
+    color: white;
+    font-size: 1.5vw;
+    padding: 0px 5px;
+    padding-bottom: 1px;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+#text{
+    width: 100%;
+    text-align: center;
+    height: calc(100% - 80px);
+}
+
+#text h1{
+    color: white;
+    font-size: 17vw;
+    line-height: 85%;
+    font-weight: 400;
+    transform: translateY(-20%);
+    text-transform: uppercase;
+}
+
+#secondpage{
+    height: 100vh;
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    padding: 0px 30px;
+    justify-content: space-between;
+}
+
+#hand-buds-image{
+    height: 100%;
+    width: 50%;
+    background-image: url(hand-uds.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+#hand-buds-text{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+#hand-buds-text h1{
+    /* width: 20vw; */
+    font-size: 5vw;
+    line-height: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+#hand-buds-text h1 span{
+    color: rgb(157, 157, 157);
+}

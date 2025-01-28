@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'General sans';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#frame {
+    height: 400px;
+    width: 300px;
+    position: relative;
+    background-color: rgb(0, 107, 128);
+    border: 5px solid rgb(154, 131, 32);
+}
+
+#close {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 8px solid rgb(60, 60, 3);
+}
+
+#close::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    transform: translateY(-100%);
+    z-index: 999;
+    background-color: rgb(60, 60, 3);
+    position: absolute;
+    transition: 0.1s linear;
+    transition-delay: 1s;
+}
+
+#frame:hover #close::before {
+    transform: translateY(0%); 
+}
+
+#man {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#head {
+    height: 26%;
+    width: 60%;
+    position: relative;
+    z-index: 2;
+    border-top-left-radius: 180px;
+    border-top-right-radius: 180px;
+    background-color: rgb(86, 22, 22);
+}
+
+#head::before {
+    content: '';
+    height: 70%;
+    width: 20px;
+    border-top-left-radius: 50px;
+    bottom: -20%;
+    left: -1%;
+    z-index: -1;
+    position: absolute;
+    background-color: rgb(86, 22, 22);
+}
+
+#head::after {
+    content: '';
+    height: 70%;
+    width: 20px;
+    border-top-right-radius: 50px;
+    bottom: -20%;
+    z-index: 0;
+    right: -1%;
+    position: absolute;
+    background-color: rgb(86, 22, 22);
+}
+
+#face {
+    height: 100px;
+    width: 50%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    position: relative;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-color: rgb(247, 204, 123);
+}
+
+#face::before {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 50%;
+    left: -10%;
+    z-index: -1;
+    top: 10%;
+    position: absolute;
+    background-color: rgb(247, 204, 123);
+}
+
+#face::after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border: 50%;
+    top: 10%;
+    z-index: -1;
+    border-radius: 50%;
+    right: -10%;
+    position: absolute;
+    background-color: rgb(247, 204, 123);
+}
+
+#shoulder {
+    height: calc(100% - 150px);
+    background-color: rgb(0, 166, 255);
+    width: 100%;
+    transform: translateY(-2%);
+    position: relative;
+}
+
+#shoulder::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 45px solid rgb(247, 204, 123);
+}
+
+#matha {
+    height: 40%;
+    width: 100%;
+    z-index: 999;
+    transform: translateY(20%);
+    display: flex;
+}
+
+#matha-left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5px;
+    padding-top: 1px;
+}
+
+#eyebrow-left {
+    height: 30%;
+    width: 55%;
+    border-radius: 50px;
+    background-color: brown;
+}
+
+#eye-left {
+    height: 60%;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#matha-right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    padding-left: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1px;
+}
+
+#eyebrow-right {
+    height: 30%;
+    width: 55%;
+    border-radius: 50px;
+    background-color: brown;
+}
+
+#eye-right {
+    height: 60%;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#cornea {
+    height: 10px;
+    border-radius: 50%;
+    width: 10px;
+    background-color: black;
+}
+
+#nose {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    transform: translateY(-20%);
+    background-color: rgb(248, 199, 134);
+    box-shadow: 0px 1px 1px black;
+}
+
+#smile {
+    height: 4px;
+    width: 30%;
+    border-radius: 0 0 100px 100px;
+    background-color: black;
+}
+
+#text{
+    background-color: rgb(219, 219, 12);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    padding: 5px 4px;
+    justify-content: space-between;
+}
+
+#text span{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#text h3{
+    color: black;
+}

@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"name": "ANIMATION WEBSITE",
+			"path": "."
+		},
+		{
+			"name": "NEEBO",
+			"path": "../NEEBO"
+		}
+	],
+	"settings": {
+		"launch": {
+			"version": "0.2.0",
+			"inputs": [],
+			"configurations": [
+				{
+					"type": "chrome",
+					"request": "launch",
+					"name": "Open FURNITURE.HTML",
+					"file": "c:\\Users\\Pc\\Desktop\\ANIMATION WEBSITE\\FURNITURE.HTML"
+				}
+			],
+			"compounds": []
+		},
+		"typescript.preferences.includePackageJsonAutoImports": "off",
+		"git.ignoreLimitWarning": true,
+		"liveServer.settings.multiRootWorkspaceName": "ANIMATION WEBSITE"
+	}
+}

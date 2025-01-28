@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANGE BACKGROUND</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Supreme Variable';
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: lightseagreen;
+        }
+
+        #main {
+            height: 90%;
+            width: 90%;
+            display: flex;
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            background-color: lightcoral;
+        }
+
+        #main button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border: 1px solid white;
+        }
+
+        #right {
+            height: 10px;
+            width: 200px;
+            position: absolute;
+            right: 0;
+            transform: translatex(100%);
+            border-radius: 50px;
+            transition: 0.5s;
+            border: 1px solid black;
+        }
+
+        #left {
+            height: 10px;
+            width: 200px;
+            border-radius: 50px;
+            transition: 0.5s;
+            left: 0;
+            transform: translatex(-100%);
+            position: absolute;
+            border: 1px solid black;
+        }
+
+        #bottom {
+            height: 200px;
+            width: 10px;
+            border-radius: 50px;
+            transition: 0.5s;
+            bottom: 0;
+            transform: translateY(100%);
+            position: absolute;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="main">
+        <button>Change Background</button>
+    </div>
+
+    <div id="right"></div>
+    <div id="left"></div>
+    <div id="bottom"></div>
+
+    <script>
+        var btn = document.querySelector('button');
+        var maindiv = document.querySelector('#main');
+
+
+        var clicked = false;
+
+        btn.addEventListener('click', () => {
+            var red = Math.floor(Math.random() * 255);
+            var green = Math.floor(Math.random() * 255);
+            var blue = Math.floor(Math.random() * 255);
+            maindiv.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            var right = document.querySelector('#right');
+            var left = document.querySelector('#left');
+            var bottom = document.querySelector('#bottom');
+
+            right.style.transform = 'translateX(0%)';
+            left.style.transform = 'translateX(0%)';
+            bottom.style.transform = 'translateY(0%)';
+            right.style.backgroundColor = `rgb(${red},${0},${0})`;
+            left.style.backgroundColor = `rgb(${0},${green},${0})`;
+            bottom.style.backgroundColor = `rgb(${0},${0},${blue})`;
+        });
+
+    </script>
+</body>
+
+</html>
