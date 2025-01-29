@@ -11,7 +11,6 @@ var eyebrow = document.querySelector('#eye-brow-right');
 
 input.addEventListener('input', () => {
     const count = input.value.length;
-    // const value = input.value.trim();
     if (count > 10) {
         eyebrow.classList.add('soch');
     } else {
