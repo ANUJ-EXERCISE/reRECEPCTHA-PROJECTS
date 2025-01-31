@@ -313,3 +313,38 @@ html,body{
     position: absolute;
     right: 0;
 }
+
+#sixthpage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 0px 300px;
+    align-items: flex-start;
+    gap: 60px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sixthpage h2{
+    width: 39vw;
+    font-size: 4.3vw;
+    font-weight: 500;
+    line-height: 50px;
+    color: white;
+}
+
+#sixthpage button{
+    font-size: 3vw;
+    padding: 24px 30px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    transition: 0.3s;
+    background-color: #e25813;
+}
+
+#sixthpage button:hover{
+    cursor: pointer;
+    background-color: #ff667d;
+    transform: rotate(-40deg) scale(0.8);
+}
