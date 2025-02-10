@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'General sans';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#write input {
+    padding: 10px;
+    font-size: 1.2vw;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid #4d6bb0;
+    width: 360px;
+}
+
+#likho {
+    display: flex;
+    gap: 10px;
+}
+
+#write p {
+    text-align: center;
+    font-size: 1.2vw;
+    color: #3c65c6;
+    margin: 10px 0px;
+}
+
+#write button {
+    padding: 10px 20px;
+    background-color: #4d6bb0;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+}
+
+#write h4 {
+    color: grey;
+    margin-top: 5px;
+}
+
+
+#main {
+    height: 250px;
+    width: 200px;
+    z-index: 999;
+}
+
+#sagat {
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#head {
+    height: 15%;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    width: 20%;
+    background-color: #fba189;
+}
+
+#mouth {
+    height: 20%;
+    width: 25%;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #fba189;
+    /* z-index: 999; */
+}
+
+#neck {
+    height: 10%;
+    width: 25%;
+    position: absolute;
+    top: 30%;
+    z-index: -1;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #e56d5c;
+}
+
+#chest {
+    height: 20%;
+    width: 90%;
+    top: 30%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: -1;
+    position: absolute;
+    background-color: #fba189;
+}
+
+#chest-shoulder-top {
+    height: 34%;
+    width: 50%;
+    z-index: -1;
+    top: 23%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    background-color: #fba189;
+}
+
+#stomach {
+    height: 20%;
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #fba189;
+}
+
+#belt {
+    height: 30%;
+    width: 110%;
+    border-radius: 3px;
+    background-color: #c72545;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    height: 70%;
+    width: 40%;
+    border-radius: 2px;
+    background-color: white;
+}
+
+#inner {
+    height: 15%;
+    width: 30%;
+    position: absolute;
+    top: 68%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+#haha {
+    height: 50%;
+    width: 110%;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #129fb1;
+}
+
+#bottom-inner {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #129fb1;
+}
+
+#line {
+    height: 100%;
+    width: 5%;
+    border-radius: 3px;
+    background-color: #14373d;
+}
+
+#legs {
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#leg-left {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 30%;
+    background-color: #fba189;
+}
+
+#leg-right {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: #fba189;
+}
+
+#rap {
+    height: 10%;
+    width: 100%;
+    border-top: 1px solid #14373d;
+    background-color: white;
+}
+
+#hand-left {
+    height: 40%;
+    width: 20%;
+    position: absolute;
+    left: 8%;
+    top: 45%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #fba189;
+}
+
+#rap-1 {
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid #14373d;
+    background-color: white;
+}
+
+#rap-hand {
+    height: 50%;
+    z-index: 999;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    position: absolute;
+    bottom: 10%;
+    border-bottom-left-radius: 5px;
+}
+
+#rap-hand-right {
+    height: 50%;
+    z-index: 999;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    position: absolute;
+    bottom: 10%;
+    border-bottom-right-radius: 5px;
+}
+
+#hand-right {
+    height: 40%;
+    width: 20%;
+    position: absolute;
+    right: 8%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    top: 45%;
+    background-color: #fba189;
+}
+
+.visible{
+    overflow: visible !important;
+}
+
+.done{
+    transform: rotate(-90deg) translateX(150%) translateY(60%) !important;
+}
+
+#finger-left {
+    height: 40%;
+    width: 50%;
+    right: 0;
+    bottom: -10%;
+    border-radius: 20px;
+    position: absolute;
+    background-color: #fba189;
+}
+
+#finger-right {
+    height: 40%;
+    width: 50%;
+    left: 0;
+    /* opacity: 0; */
+    bottom: -10%;
+    border-radius: 20px;
+    position: absolute;
+    background-color: #fba189;
+}
+
+.opacity{
+    opacity: 0 !important;
+}
+
+#thumb-right {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    /* top: 60%; */
+    top: 70%;
+    left: -20%;
+    /* right: -30%; */
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #fba189;
+}
+
+.right{
+    left: 30% !important;
+}
+
+#thumb-right::after{
+    content: '✔️';
+    transform: rotate(90deg);
+    position: absolute;
+    right: -70%;
+}
+
+#thumb-left {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    right: -20%;
+    border-radius: 20px;
+    background-color: #fba189;
+}
+
+#eyes{
+    height: 40%;
+    gap: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+#eye-left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#eye-right{
+    height: 100%;
+    width: 50%;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#white{
+    height: 50%;
+    width: 80%;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+#white::after{
+    content: '';
+    height: 50px;
+    width: 4px;
+    left: 35%;
+    top: 100%;
+    z-index: 999;
+    position: absolute;
+    background-color: skyblue;
+}
+
+#eyebrow-left{
+    height: 30%;
+    width: 80%;
+    background-color: #14373d;
+}
+
+#clothe{
+    height: 100%;
+    width: 50%;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    position: absolute;
+    background-color: #14373d;
+}
+
+#rope{
+    height: 20%;
+    width: 20%;
+    transform: rotate(-40deg);
+    left: 30%;
+    top: -10%;
+    z-index: 999;
+    position: absolute;
+    border-bottom: 2px solid #14373d;
+}
+
+#eyebrow-right{
+    height: 30%;
+    width: 80%;
+    background-color: #14373d;
+}
+
+.happy{
+    transition: 0.3s;
+    transform: rotate(-10deg) !important;
+}
+
+.cry{
+    transition: 0.3s;
+    transform: rotate(10deg) !important;
+}
+
+.soch{
+    transition: 0.3s;
+    transform: translateY(-130%) !important;
+}
+
+#smile{
+    height: 30%;
+    width: 50%;
+    top: 20%;
+    left: 23%;
+    /* border-radius: 40%; */
+    border-top: 2px solid black;
+    /* background-color: white; */
+    position: absolute;
+}
+
+.sad{
+    border-top: 2px solid black !important;
+    border-radius: 40% !important;
+}
+
+.smile{
+    background-color: white !important;
+    border-bottom-right-radius: 40px !important;
+    border-bottom-left-radius: 40px !important;
+    border-top: 0px solid black !important;
+}
+
+#niple{
+    height: 2%;
+    width: 100%;
+    position: absolute;
+    top: 47%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#nip{
+    height: 100%;
+    width: 3%;
+    border-radius: 50%;
+    background-color: #dd6f5e;
+}

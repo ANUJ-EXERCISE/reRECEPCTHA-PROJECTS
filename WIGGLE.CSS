@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'General sans';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main{
+    height: 200px;
+    width: 120px;
+}
+
+#wiggle{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+#write {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(20%);
+}
+
+#write p {
+    color: #252f4a;
+    font-size: 1.2vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#write input {
+    height: 40px;
+    width: 330px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.3vw;
+    padding: 20px;
+    border: 1px solid #506bae;
+}
+
+#likho {
+    margin: 10px 0px;
+}
+
+#write button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #3d5184;
+    outline: none;
+    color: white;
+}
+
+#write h4 {
+    font-size: 1.4vw;
+    color: grey;
+}

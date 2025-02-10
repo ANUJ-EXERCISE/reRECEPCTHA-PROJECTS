@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'General sans';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main{
+    height: 140px;
+    width: 100px;
+}
+
+#buster{
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+#head{
+    height: 70%;
+    border-radius: 40%;
+    width: 100%;
+    position: relative;
+    background-color: #d1b48c;
+}
+
+#eyes{
+    height: 40%;
+    position: absolute;
+    top: 25%;
+    display: flex;
+    width: 100%;
+}
+
+#white{
+    height: 100%;
+    width: 70%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.4s;
+    position: relative;
+    background-color: white;
+}
+
+#cornea{
+    height: 20%;
+    width: 20%;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+.visible{
+    overflow: visible !important;
+}
+
+#white::before{
+    content: '';
+    height: 70px;
+    top: 100%;
+    width: 10px;
+    position: absolute;
+    background-color: skyblue;
+}
+
+#eye-left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    padding-right: 2px;
+    justify-content: flex-end;
+}
+
+#eye-right{
+    padding-left: 2px;
+    height: 100%;
+    width: 50%;
+}
+
+#black{
+    height: 80%;
+    width: 90%;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.serious{
+    height: 50% !important;
+}
+
+#smile{
+    height: 20%;
+    width: 30%;
+    position: absolute;
+    bottom: 15%;
+    left: 35%;
+    /* border-radius: 50%; */
+    /* transform: translateY(50%); */
+    border-bottom: 2px solid black;
+}
+
+.smile{
+    border-radius: 50% !important;
+}
+
+.serious{
+    border-radius: 10% !important;
+    transition: 0.4s;
+}
+
+.sad{
+    transform: translateY(50%) !important;
+    border-radius: 50% !important;
+    border-top: 2px solid black !important;
+    border-bottom: 0px solid black !important;
+}
+
+#shirt{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #cbcbfc;
+}
+
+#shirt h5{
+    color: #cbf231;
+    font-weight: 900;
+}
+
+
+#shirt::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top:6px solid #d1b48c;
+}
+
+
+#mel-left{
+    height: 90%;
+    width: 60%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #a0532a;
+}
+
+#ear-left{
+    height: 25%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 25%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    left: -10%;
+    background-color: #d1b48c;
+    position: absolute;
+}
+
+#ear-right{
+    height: 25%;
+    width: 20%;
+    top: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    right: -10%;
+    background-color: #d1b48c;
+    position: absolute;
+}
+
+#mel-right{
+    height: 90%;
+    width: 60%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #a0532a;
+}
+
+#write input {
+    padding: 10px;
+    font-size: 1.5vw;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid #4d6bb0;
+    width: 300px;
+}
+
+#likho{
+    display: flex;
+    gap: 10px;
+}
+
+#write p {
+    text-align: center;
+    font-size: 1.2vw;
+    color: #3c65c6;
+    margin: 10px 0px;
+}
+
+#write button {
+    padding: 10px 20px;
+    background-color: #4d6bb0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#write h4{
+    color: grey;
+    margin-top: 5px;
+}
+
+#hand{
+    height: 70px;
+    bottom: 0%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    right: 30%;
+    transform: rotate(-90deg);
+    width: 10px;
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    background-color: #cbcbfc;
+}
+
+.done{
+    right: -20% !important;
+}
+
+#finger{
+    height: 20%;
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #d1b48c;
+}
+
+#finger::after{
+    content: '';
+    height: 8px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 8px;
+    bottom: 4%;
+    right: -50%;
+    background-color: #d1b48c;
+    position: absolute;
+}
+
+#hand::before{
+    content: '✔️';
+    bottom: -8%;
+    right: -280%;
+    transform: rotate(90deg);
+    position: absolute;
+}

@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main {
+    height: 250px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#stan {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#face {
+    height: 50%;
+    width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    background-color: #caab82;
+}
+
+
+#chest {
+    height: 30%;
+    width: 70%;
+    position: relative;
+    background-color: black;
+}
+
+#chest::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #caab82;
+}
+
+#legs {
+    height: 20%;
+    width: 70%;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    background-color: #E6E6FA;
+}
+
+#top {
+    height: 40px;
+    position: absolute;
+    z-index: 999;
+    top: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    width: 110%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transform: translateY(-70%);
+    background-color: black;
+}
+
+.bow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.center {
+    width: 13px;
+    border-radius: 5px;
+    height: 13px;
+    background-color: #E6E6FA;
+}
+
+.left-bow {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 15px solid #E6E6FA;
+}
+
+.right-bow {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 15px solid #E6E6FA;
+}
+
+#top::after {
+    content: '';
+    background-color: black;
+    height: 100%;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 20px;
+    left: 0;
+    width: 30%;
+    bottom: -60%;
+    position: absolute;
+}
+
+#top::before {
+    content: '';
+    background-color: black;
+    height: 100%;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 20px;
+    right: 0;
+    width: 30%;
+    bottom: -60%;
+    position: absolute;
+}
+
+#face {
+    flex-direction: column;
+    align-items: center;
+}
+
+#center {
+    height: 50%;
+    width: 100%;
+    transform: translateY(18%);
+    z-index: 999;
+    display: flex;
+}
+
+#goggle-left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2px;
+    align-items: flex-end;
+    gap: 1px;
+}
+
+#goggle-right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding-left: 2px;
+}
+
+#eyebrow-left {
+    height: 0px;
+    width: 40px;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+
+.cry1 {
+    transform: rotate(-4deg) translateY(25%) !important;
+}
+
+.cry2 {
+    transform: rotate(4deg) translateY(25%);
+}
+
+.happy1 {
+    transform: translateY(-35%) !important;
+}
+
+#eyebrow-right {
+    height: 0px;
+    width: 40px;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+
+#eye {
+    height: 80%;
+    width: 28px;
+    display: flex;
+    z-index: 999;
+    justify-content: center;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: white;
+}
+
+#tear {
+    height: 77px;
+    width: 10px;
+    z-index: -1;
+    display: none;
+    position: absolute;
+    background-color: rgb(104, 104, 203);
+}
+
+#black {
+    height: 45%;
+    width: 15px;
+    background-color: black;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+#goggle {
+    height: 35px;
+    width: 40px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    position: relative;
+    border: 5px solid #E6E6FA;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+#bottom {
+    height: 10px;
+    width: 30px;
+    transform: translateY(100%);
+    border-bottom: 2px solid black;
+}
+
+.sad {
+    border-top: 2px solid black;
+    border-radius: 50%;
+    border-bottom: none !important;
+}
+
+.happy {
+    border-bottom: 2px solid black;
+    border-radius: 50%;
+    border-top: none !important;
+}
+
+#write {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(20%);
+}
+
+#write p {
+    color: #252f4a;
+    font-size: 1.2vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#write input {
+    height: 40px;
+    width: 330px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.3vw;
+    padding: 20px;
+    border: 1px solid #506bae;
+}
+
+#likho {
+    margin: 10px 0px;
+}
+
+#write button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #3d5184;
+    outline: none;
+    color: white;
+}
+
+#write h4 {
+    font-size: 1.4vw;
+    color: grey;
+}
+
+#thumb {
+    height: 12px;
+    width: 70px;
+    border-radius: 40px;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    background-color: black;
+    align-items: flex-end;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    justify-content: flex-end;
+    transform: translateX(0%) translateY(160%);
+    transition: 0.1s;
+}
+
+.done {
+    transform: translateX(100%) translateY(100%) !important;
+}
+
+.visible {
+    overflow: visible !important;
+}
+
+#finger {
+    height: 100%;
+    width: 20%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(249, 183, 158);
+}
+
+#finger::before {
+    content: '';
+    height: 8px;
+    width: 10px;
+    transform: translateX(30%) translateY(-80%) rotate(-90deg);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(249, 183, 158);
+    position: absolute;
+}
+
+#finger::after {
+    content: '✔️';
+    position: absolute;
+    transform: translateX(-10%) translateY(-150%);
+}

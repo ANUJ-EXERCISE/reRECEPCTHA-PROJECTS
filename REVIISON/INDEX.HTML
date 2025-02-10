@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
 
-    
+
     <script>
-        var obj ={
-            name:"anuj",
-            age:16,
+        async function hello(){
+            let promise = new Promise((res,rej)=>{
+                var a = Math.floor(Math.random()*10);
+                if(a > 5){
+                    res('you got value')
+                } rej('you lost value');
+            })
+            var result = await promise;
+            console.log(result)
         }
 
-        var obj2 ={
-            namee:"sachin bhai",
-            age:20
-        }
 
-        obj2.__proto__ = obj;
-        console.log(obj2.name)
+        hello()
 
     </script>
 
 </body>
+
 </html>
