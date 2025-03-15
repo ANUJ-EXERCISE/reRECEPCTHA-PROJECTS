@@ -4,14 +4,14 @@ let handleft = document.querySelector("#hand-left");
 let handright = document.querySelector("#hand-right");
 var lips = document.querySelector("#smile");
 var head = document.querySelector("#head");
-var eye = document.querySelectorAll("#eye");
+var eye = document.querySelectorAll("#white");
 
 input.addEventListener("input", () => {
   if (input.value === "You look like") {
     head.classList.add("soch");
     var music = document.getElementById("background-music-question");
     music.play();
-  } else if (input.value === "You look like a default character") {
+  } else if (input.value === "You look like a default Avatar!") {
     setTimeout(() => {
       handleft.classList.add("uper");
       handright.classList.add("uper");
@@ -23,7 +23,7 @@ input.addEventListener("input", () => {
       handleft.classList.remove("uper");
       handright.classList.remove("uper");
     }, 800);
-  } else if (input.value === "Minecraft is better than Roblox") {
+  } else if (input.value === "Why you look Minecraft character?") {
     var a = Array.from(eye);
     a.forEach((elem) => {
       elem.classList.add("visible");

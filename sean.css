@@ -92,17 +92,17 @@ body {
     align-items: center;
     color: white;
     justify-content: center;
-    background-color: red;
+    background-color: #3da1a1;
 }
 
 #shed{
     height: 20%;
     width: 140%;
     bottom: 0;
-    left: 0;
+    right: 0;
     border-top-right-radius: 20px;
     position: absolute;
-    background-color: black;
+    background-color: #864cc3;
 }
 
 #chest{
@@ -121,8 +121,26 @@ body {
     border-radius: 5px;
 }
 
+#colar{
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #2f506f;
+}
+
+#colar-white{
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    background-color: #b2b6b7;
+}
+
 .done{
-    transform: rotate(90deg) translateX(-170%) translateY(-30%) !important; 
+    transform: rotate(-90deg) translateX(170%) translateY(30%) !important; 
 }
 
 #center{
@@ -132,7 +150,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    background-color: #2f506f;
+}
+
+#center img{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 #center h5{
@@ -153,16 +178,9 @@ body {
 #hand-right::before{
     content: '✔️';
     position: absolute;
-    top: -30%;
-    left: 20%;
-    transform: rotate(-90deg);
-}
-
-#hand-left::before{
-    content: '✔️';
-    position: absolute;
-    top: -30%;
-    left: 20%;
+    bottom: -40%;
+    right: 0;
+    transform: rotate(90deg);
 }
 
 .uper{
@@ -180,11 +198,11 @@ body {
 #leg{
     height: 100%;
     width: 50%;
-    background-color: #0a0a0a;
+    background-color: #b69101;
 }
 
 #leg:nth-of-type(2){
-    border-left: 1px solid rgba(128, 128, 128, 0.247);
+    border-left: 1px solid rgba(0, 0, 0, 0.423);
 }
 
 #eyes{
@@ -193,13 +211,38 @@ body {
     position: absolute;
     top: 30%;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
-#eye{
+#goggle-left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#white{
+    height: 70%;
+    width: 50%;
+    border-top-left-radius: 40px;
+    overflow: hidden;
+    border-top-right-radius: 40px;
+    background-color: white;
+    position: relative;
+}
+
+#goggle-right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#black{
     height: 50%;
-    width: 10%;
+    width: 40%;
+    margin: 2px;
     overflow: hidden;
     position: relative;
     border-radius: 50%;
@@ -210,11 +253,12 @@ body {
     overflow: visible !important;
 }
 
-#eye::after{
+#white::after{
     content: '';
     height: 28px;
     width: 5px;
     top: 100%;
+    left: 25%;
     position: absolute;
     background-color: #455ead;
 }

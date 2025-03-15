@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "General sans";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: #5856d5;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#button{
+    height: 6%;
+    width: 10%;
+    display: flex;
+    letter-spacing: 2px;
+    color: black;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: white;
+}
+
+#head{
+    height: 98%;
+    width: 30%;
+    /* top: -80%; */
+    left: 15%;
+    z-index: -1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: absolute;
+    background-color: white;
+}
+
+#ear-left{
+    height: 40%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: rotate(-10deg);
+    width: 40%;
+    top: -20%;
+    display: none;
+    /* opacity: 0; */
+    position: absolute;
+    z-index: -1;
+    background-color: #b7b5e7;
+}
+
+#ear-right{
+    height: 40%;
+    /* opacity: 0; */
+    display: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: rotate(10deg);
+    width: 40%;
+    top: -20%;
+    z-index: -1;
+    right: 0;
+    position: absolute;
+    background-color: #b7b5e7;
+}
+
+#eye{
+    height: 60%;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #b7b5e7;
+}
+
+#eye-left{
+    height: 30%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#pupil{
+    height: 60%;
+    width: 60%;
+    border-radius: 50%;
+    background-color: #534c9c;
+}
+
+#eye-right{
+    height: 30%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#foot-first{
+    height: 50%;
+    width: 10%;
+    position: absolute;
+    /* bottom: -40%; */
+    left: 20%;
+    background-color: white;
+}
+
+#foot-second{
+    height: 50%;
+    width: 10%;
+    position: absolute;
+    /* bottom: -40%; */
+    left: 35%;
+    background-color: white;
+}
+
+#foot-third{
+    height: 50%;
+    width: 10%;
+    position: absolute;
+    /* bottom: -40%; */
+    left: 60%;
+    background-color: white;
+}
+
+#foot-fourth{
+    height: 50%;
+    width: 10%;
+    position: absolute;
+    /* bottom: -40%; */
+    left: 75%;
+    background-color: white;
+}
+
+#button h5{
+    z-index: 999;
+}

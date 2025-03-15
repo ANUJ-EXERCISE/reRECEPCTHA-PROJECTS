@@ -9,11 +9,11 @@ var lips = document.querySelector('#bottom');
 var question = document.querySelector('#question');
 var thumb = document.querySelector('#thumb')
 input.addEventListener('input', () => {
-    if (input.value === '126') {
+    if (input.value === '404') {
         eyebrowright.classList.add('soch');
         var music = document.getElementById('hmm');
         music.play();
-    } else if (input.value === '1265.452') {
+    } else if (input.value === '404 Brain Not Found') {
         lips.classList.add('smile');
         var music = document.getElementById('ah');
         music.play();

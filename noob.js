@@ -7,31 +7,38 @@ var head = document.querySelector("#head");
 var eye = document.querySelectorAll("#eye");
 
 input.addEventListener("input", () => {
-  if (input.value === "You look like") {
+  if (input.value === "Why do you") {
     head.classList.add("soch");
     var music = document.getElementById("background-music-question");
     music.play();
-  } else if (input.value === "You look like a default character") {
-    setTimeout(() => {
-      handleft.classList.add("uper");
-      handright.classList.add("uper");
-      head.classList.remove("soch");
-    }, 200);
-    var music = document.getElementById("background-music-aah");
+  } else if (input.value === "Why do you look like a glitch?") {
+    handleft.classList.add("uper");
+    handright.classList.add("uper");
+    head.classList.remove("soch");
+    var music = document.getElementById("background-music-cry");
     music.play();
     setTimeout(() => {
       handleft.classList.remove("uper");
       handright.classList.remove("uper");
     }, 800);
-  } else if (input.value === "Minecraft is better than Roblox") {
+    lips.classList.add("sad");
     var a = Array.from(eye);
     a.forEach((elem) => {
       elem.classList.add("visible");
     });
-    lips.classList.add("sad");
+  }else if(input.value === ''){
+    lips.classList.remove("sad");
+    var a = Array.from(eye);
+    a.forEach((elem) => {
+      elem.classList.remove("visible");
+    });
+  } else if (input.value === "You are a noob but pro!") {
+    setTimeout(() => {
+      handright.style.transition = "none";
+      lips.classList.add('smile');
+    }, 200);
     input.disabled = true;
-    handright.style.transition = "none";
-    var music = document.getElementById("background-music-cry");
+    var music = document.getElementById("background-music-aah");
     music.play();
     btn.addEventListener("click", () => {
       handright.classList.add("done");

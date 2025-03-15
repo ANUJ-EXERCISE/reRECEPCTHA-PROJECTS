@@ -69,13 +69,10 @@ body {
 
 #head{
     height: 30%;
-    width: 40%;
+    width: 35%;
     position: relative;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: #989898;
+    border-radius: 15px;
+    background-color: #e4c038;
     transition: 0.3s;
 }
 
@@ -113,7 +110,7 @@ body {
 
 #hand-left{
     height: 100%;
-    background-color: #989898;
+    background-color: #e4c038;
     width: 20%;
     transition: 0.3s;
     overflow: hidden;
@@ -132,7 +129,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    background-color: #1969a4;
 }
 
 #center h5{
@@ -147,7 +144,7 @@ body {
     width: 20%;
     overflow: hidden;
     position: relative;
-    background-color: #989898;
+    background-color: #e4c038;
 }
 
 #hand-right::before{
@@ -180,11 +177,11 @@ body {
 #leg{
     height: 100%;
     width: 50%;
-    background-color: #0a0a0a;
+    background-color: #91a542;
 }
 
 #leg:nth-of-type(2){
-    border-left: 1px solid rgba(128, 128, 128, 0.247);
+    border-left: 2px solid rgba(17, 16, 16, 0.643);
 }
 
 #eyes{
@@ -220,27 +217,28 @@ body {
 }
 
 #smile{
-    height: 30%;
-    width: 30%;
+    height: 50%;
+    width: 20%;
     position: absolute;
-    bottom: 10%;
-    left: 35%;
-    border-radius: 50%;
-    border-bottom: 4px solid black;
+    bottom: -10%;
+    left: 40%;
+    /* border-radius: 50%; */
+    border-top: 3px solid black;
 }
 
 .sad{
     bottom: -10% !important;
-    border-top: 4px solid black !important;
+    border-top: 3px solid black !important;
     border-bottom: 0px solid black !important;
     border-radius: 50% !important;
 }
 
-/* .smile{
+.smile{
     border-radius: 50% !important;
+    bottom: 10% !important;
     border-top: 0px solid black !important;
     border-bottom: 4px solid black !important;
-} */
+}
 
 #cap h5{
     font-weight: 900;

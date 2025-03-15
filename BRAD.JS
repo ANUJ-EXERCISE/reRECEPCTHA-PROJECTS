@@ -11,7 +11,7 @@ input.addEventListener('input',()=>{
         eyebrowright.classList.add('soch');
         var music = document.getElementById('background-music-question');
         music.play();
-    }else if(input.value === 'Did you skip leg day?'){
+    }else if(input.value === 'Did you skip brain day?'){
         eyebrowright.classList.remove('soch');
         eyebrowright.classList.add('right-eyebrow-sad');
         eyebrowleft.classList.add('left-eyebrow-sad');
@@ -34,7 +34,7 @@ input.addEventListener('input',()=>{
         eyebrowright.classList.add('soch');
         var music = document.getElementById('background-music-question');
         music.play();
-    }else if(input.value === `I bet you're good at golf!`){
+    }else if(input.value === `Your dress sense is good!`){
         input.disabled = true;
         setTimeout(()=>{
         eyebrowright.classList.remove('soch');
