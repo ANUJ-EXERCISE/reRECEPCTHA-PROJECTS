@@ -4,7 +4,6 @@ var white = document.querySelectorAll('#white');
 var lips = document.querySelector('#smile');
 var handright = document.querySelector('#hand-right');
 
-
 input.addEventListener('input',()=>{
     if(input.value === 'Where did your'){
         var a = Array.from(white);

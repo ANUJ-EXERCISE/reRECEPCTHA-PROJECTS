@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "General sans";
+}
+
+*::selection{
+    background-color: #abcef6;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#write input {
+  padding: 10px;
+  font-size: 1.2vw;
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid #4d6bb0;
+  width: 360px;
+}
+
+#likho {
+  display: flex;
+  gap: 10px;
+}
+
+#write p {
+  text-align: center;
+  font-size: 1.2vw;
+  color: #3c65c6;
+  margin: 10px 0px;
+}
+
+#write button {
+  padding: 10px 20px;
+  background-color: #4d6bb0;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+}
+
+#write h4 {
+  color: grey;
+  margin-top: 5px;
+}
+
+#main{
+    height: 220px;
+    width: 200px;
+    transform: translatey(-5%);
+}
+
+#papyrus{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#hand-right{
+    height: 6%;
+    width: 20%;
+    top: 55%;
+    overflow: hidden;
+    z-index: -1;
+    right: 5%;
+    position: absolute;
+    border: 3px solid black;
+    background-color: #3c65c6;
+}
+
+.visible{
+    overflow: visible !important;
+}
+
+#finger{
+    height: 100%;
+    width: 30%;
+    right: 0;
+    position: absolute;
+    background-color: white;
+}
+
+#hand-right::after{
+    content: '';
+    height: 100%;
+    width: 20%;
+    right: 10%;
+    top: -90%;
+    position: absolute;
+    background-color: white;
+}
+
+.done{
+    right: -10% !important;
+}
+
+#hand-right::before{
+    content: '✔️';
+    right: -15%;
+    top: -500%;
+    position: absolute;
+}
+
+#box{
+    height: 3.5%;
+    width: 4.3%;
+}
+
+.smile{
+    opacity: 0;
+    border: 1px solid black;
+}
+
+.sad{
+    opacity: 0;
+}
+
+.soch{
+    background-color: white !important;
+}
+
+.eye{
+    position: relative;
+    overflow: hidden;
+}
+
+.eye::before{
+    content: '';
+    height: 50px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background-color: #3c65c6;
+}

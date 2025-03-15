@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "General sans";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#main {
+  height: 250px;
+  width: 150px;
+}
+
+#seek {
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#write {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20%);
+}
+
+#write p {
+  color: #252f4a;
+  font-size: 1.2vw;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#write input {
+  height: 40px;
+  width: 330px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.3vw;
+  padding: 20px;
+  border: 1px solid #506bae;
+}
+
+#likho {
+  margin: 10px 0px;
+}
+
+#write button {
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #3d5184;
+  outline: none;
+  color: white;
+}
+
+#write h4 {
+  font-size: 1.4vw;
+  color: grey;
+}
+
+#head {
+  height: 25%;
+  width: 40%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+#top {
+  clip-path: ellipse(50% 40% at 50% 50%);
+  height: 50%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.soch{
+  height: 40% !important;
+}
+
+#overlay{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    background-color: #1e1e1e;
+}
+
+#pupil {
+  height: 45%;
+  width: 45%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+}
+
+#white {
+  height: 50%;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  width: 50%;
+  border-left: 1px solid rgb(128, 12, 35);
+  border-right: 1px solid rgb(148, 17, 43);
+  border-bottom: 1px solid rgb(134, 13, 37);
+  background-color: white;
+}
+
+#chest {
+  height: 35%;
+  width: 60%;
+  position: absolute;
+  top: 22%;
+  z-index: -1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: black;
+}
+
+#weist {
+  height: 10%;
+  width: 60%;
+  top: 48%;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  position: absolute;
+  background-color: black;
+}
+
+#legs {
+  height: 55%;
+  width: 63%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+#leg {
+  height: 100%;
+  width: 40%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: black;
+}
+
+#ld {
+  height: 40%;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+}
+
+#hand-left {
+  height: 40%;
+  width: 18%;
+  left: 0;
+  top: 25%;
+  overflow: hidden;
+  transform: rotate(22deg) translateX(45%);
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  position: absolute;
+  background-color: black;
+}
+
+.smile-left {
+  transform: rotate(90deg) translateX(-165%) !important;
+}
+
+#hand-right {
+  height: 40%;
+  width: 18%;
+  right: 0;
+  top: 25%;
+  transform: rotate(-22deg) translateX(-45%);
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  overflow: hidden;
+  position: absolute;
+  background-color: black;
+}
+
+.visible{
+    overflow: visible !important;
+}
+
+#hand-right::after{
+    content: '';
+    height: 10%;
+    width: 90%;
+    bottom: 10%;
+    right: -20%;
+    border-radius: 20px;
+    position: absolute;
+    background-color: black;
+}
+
+#hand-right::before{
+    content: '✔️';
+    transform: rotate(90deg);
+    bottom: 2%;
+    right: -130%;
+    position: absolute;
+}
+
+#hand-left::before{
+    content: '✔️';
+    transform: rotate(-90deg);
+    bottom: 2%;
+    left: -130%;
+    position: absolute;
+}
+
+#hand-left::after{
+    content: '';
+    height: 10%;
+    width: 90%;
+    bottom: 10%;
+    left: -20%;
+    border-radius: 20px;
+    position: absolute;
+    background-color: black;
+}
+
+
+
+.smile-right {
+  transform: rotate(-90deg) translateX(160%) !important;
+}

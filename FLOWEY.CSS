@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "General sans";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  z-index: 999;
+  flex-direction: column;
+}
+
+#write input {
+  padding: 10px;
+  font-size: 1.2vw;
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid black;
+  width: 360px;
+}
+
+#likho {
+  display: flex;
+  gap: 10px;
+}
+
+#write p {
+  text-align: center;
+  font-size: 1.2vw;
+  color: black;
+  margin: 10px 0px;
+}
+
+#write button {
+  padding: 10px 20px;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+}
+
+#write h4 {
+  color: rgba(128, 128, 128, 0.502);
+  margin-top: 5px;
+}
+
+#main {
+  height: 250px;
+  width: 200px;
+  position: relative;
+  transform: translateY(-5%);
+}
+
+#flowey {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main img {
+  height: 380%;
+  width: 380%;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  background-size: cover;
+}
+
+#box-1 {
+  height: 5%;
+  width: 4.6%;
+}
+
+.sad {
+  opacity: 0;
+}
+
+.smile {
+  opacity: 0;
+}
+
+.soch {
+  height: 3% !important;
+}
